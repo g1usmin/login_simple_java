@@ -5,13 +5,11 @@
 
 package com.todocodeacademy.login_simple;
 
-/**
- *
- * @author Gabi
- */
+
 public class Login_simple {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
+
 }
