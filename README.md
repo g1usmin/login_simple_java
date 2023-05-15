@@ -1,2 +1,2 @@
 # Login 
-Practicing and reviewing some java
+Practicing and reviewing some Java
