@@ -4,17 +4,19 @@
  */
 package com.todocodeacademy.login_simple.igu;
 
+import com.todocodeacademy.login_simple.logica.ControladoraLogica;
+
 /**
  *
  * @author Gabi
  */
 public class Principal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Principal
-     */
+    ControladoraLogica control;
+    
     public Principal() {
         initComponents();
+        control = new ControladoraLogica();
     }
 
     /**
@@ -63,6 +65,11 @@ public class Principal extends javax.swing.JFrame {
 
         btnLogin.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         btnReset.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnReset.setText("Reset");
@@ -170,6 +177,18 @@ public class Principal extends javax.swing.JFrame {
     private void txtContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseniaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtContraseniaActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+             
+        String usuario = txtUsuario.getText();
+        String contrasenia = txtContrasenia.getText();
+        
+        String mensaje = control.validarUsuario(usuario, contrasenia);
+        
+        txtMensaje.setText(mensaje);
+        
+        
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments

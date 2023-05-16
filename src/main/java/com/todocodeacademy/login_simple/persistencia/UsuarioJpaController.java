@@ -28,7 +28,7 @@ public class UsuarioJpaController implements Serializable {
     private EntityManagerFactory emf = null;
 
     public UsuarioJpaController(){
-        emf = Persistence.createEntityManagerFactory("loginPu");
+        emf = Persistence.createEntityManagerFactory("loginPU");
     }
         
     public EntityManager getEntityManager() {
